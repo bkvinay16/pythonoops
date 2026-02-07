@@ -1,0 +1,37 @@
+from abc import ABC, abstractmethod
+
+# Abstract class
+class Vehicle(ABC):
+
+    @abstractmethod
+    def start_engine(self):
+        pass
+
+
+# Child class 1
+class Car(Vehicle):
+    def start_engine(self):
+        print("Car engine started with key ignition")
+
+
+# Child class 2
+class Bike(Vehicle):
+    def start_engine(self):
+        print("Bike engine started with self start")
+
+
+# Child class 3
+class Bus(Vehicle):
+    def start_engine(self):
+        print("Bus engine started with air pressure system")
+
+
+# Creating objects and calling methods
+car = Car()
+bike = Bike()
+bus = Bus()
+
+print("----- Vehicle Engine Start -----")
+car.start_engine()
+bike.start_engine()
+bus.start_engine()
